@@ -1,22 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | E-commerce product page</title>
 
-  Collections
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="wrapper">
+          <div class="appbar">
+            <img class="mobile-menu" src="images/icon-menu.svg" alt="mobile Menu">
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo.svg" alt="Sneaker Company" />
+              </a>
+            </div>
+            <nav class="navigation">
+              <ul>
+                <li>
+                  <a href="#">Collections</a>
+                 <li> <a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">Collections</a></li>
+                  <li><a href="#">About</a></li>
+                  <li ><a href="#">Contact</a></li>
+                </li>
+              </ul>
+            </nav>
+            <div class="cart-auth">
+              <div class="cart-icon">
+                <span class="cart-icon-no">3</span>
+                <img src="images/icon-cart.svg" alt="Add to Cart" />
+              </div>              
+              <div class="auth">
+                <a href="#"><img src="images/image-avatar.png" alt="Image Avatar" /></a>
+              </div>
+            </div>
+
+            <div class="carts hide-carts">
+              <p>Cart</p>
+              <ul class="carts-items">
+                <li class="carts-item">
+                  <div class="cart">
+                    <div class="cart-info">
+                      <img src="images/image-product-1-thumbnail.jpg" alt="Item 1" class="cart-info--img">
+                     <div class="cart-info--content">
+                       <p>Fall Limited Edition Sneakers</p>
+                       <p>$125.00x3 <strong>$375.00</strong></p>
+                     </div>
+                    </div>
+                    <img src="images/icon-delete.svg" alt="">
+                  </div>
+                </li>
+
+                <li class="carts-item">
+                  <div class="cart">
+                    <div class="cart-info">
+                      <img src="images/image-product-2-thumbnail.jpg" alt="Item 2" class="cart-info--img">
+                     <div class="cart-info--content">
+                       <p>Fall Limited Edition Sneakers</p>
+                       <p>$125.00x3 <strong>$375.00</strong></p>
+                     </div>
+                    </div>
+                    <img src="images/icon-delete.svg" alt="">
+                  </div>
+                </li>
+              </ul>
+              <button class="carts-checkout-btn">
+                Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Collections
   Men
   Women
   About
@@ -39,6 +123,6 @@
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </div> -->
+  </body>
 </html>

@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container .wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.appbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.appbar .mobile-menu {
+  display: none;
+}
+@media (max-width: 375px) {
+  .appbar .mobile-menu {
+    display: block;
+  }
+}
+.appbar .logo {
+  margin-right: 2.6em;
+  padding-left: 1em;
+}
+.appbar .navigation {
+  height: 100%;
+}
+.appbar .navigation ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  height: 100%;
+}
+.appbar .navigation ul li {
+  margin-right: 1.2em;
+  height: 100%;
+}
+.appbar .navigation ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: #68707d;
+  font-size: 0.95rem;
+}
+.appbar .navigation ul li a:hover {
+  border-bottom: 3px solid #ff7d1a;
+}
+@media (max-width: 375px) {
+  .appbar .navigation {
+    display: none;
+  }
+}
+.appbar .cart-auth {
+  padding-right: 3em;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.appbar .cart-auth .cart-icon {
+  margin-right: 2.46em;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.appbar .cart-auth .cart-icon-no {
+  border-radius: 10px;
+  padding: 0.1em 0.6em;
+  display: inline-block;
+  font-size: 0.65rem;
+  background-color: #ff7d1a;
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  color: white;
+}
+.appbar .cart-auth .auth img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.appbar .cart-auth .auth:hover img {
+  outline: 1px solid #ff7d1a;
+}
+.appbar .carts {
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: 0 27px 79px rgba(0, 0, 0, 0.06);
+  position: absolute;
+  right: 0;
+  top: 90%;
+  max-width: 280px;
+  min-width: 279px;
+  padding: 0 0 1.2em 0;
+}
+.appbar .carts p {
+  font-size: 0.9rem;
+  padding: 1em;
+  border-bottom: 1px solid #b6bcc8;
+}
+.appbar .carts-items {
+  list-style-type: none;
+  margin-top: 1em;
+}
+.appbar .carts-item {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+.appbar .carts-checkout-btn {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 0;
+  background-color: #ff7d1a;
+  color: white;
+  border-radius: 0.8em;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.appbar .carts .cart {
+  display: flex;
+  align-items: center;
+}
+.appbar .carts .cart-info {
+  display: flex;
+  line-height: 0.2;
+  width: 97%;
+}
+.appbar .carts .cart-info--img {
+  width: 44px;
+  height: 44px;
+  border-radius: 3px;
+}
+.appbar .carts .cart-info--content p {
+  font-size: 0.72rem;
+  color: #b6bcc8;
+  border-bottom: none;
+}
+.appbar .carts .cart-info--content p strong {
+  color: black;
+}
+.appbar .hide-carts {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

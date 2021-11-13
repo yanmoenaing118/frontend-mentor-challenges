@@ -1,0 +1,163 @@
+.appbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 2px rgba(#000, 0.1);
+  position: relative;
+
+  .mobile-menu {
+    display: none;
+    @include respond(mobile) {
+      display: block;
+    }
+  }
+
+  .logo {
+    margin-right: 2.6em;
+    padding-left: 1em;
+  }
+
+  .navigation {
+    height: 100%;
+    ul {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      height: 100%;
+      li {
+        margin-right: 1.2em;
+        height: 100%;
+
+        a {
+          @include flex-center;
+          height: 100%;
+          text-decoration: none;
+          color: $dark-grayish-blue;
+          font-size: 0.95rem;
+
+          &:hover {
+            border-bottom: 3px solid $orange;
+          }
+        }
+      }
+    }
+
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+
+  .cart-auth {
+    padding-right: 3em;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    @include flex-center;
+    position: relative;
+
+    .cart-icon {
+      margin-right: 2.46em;
+      position: relative;
+      height: 40px;
+      width: 40px;
+      @include flex-center;
+      cursor: pointer;
+
+      &-no {
+        border-radius: 10px;
+        padding: 0.1em 0.6em;
+        display: inline-block;
+        font-size: 0.65rem;
+        background-color: $orange;
+        position: absolute;
+        top: 1px;
+        right: 4px;
+        color: $white;
+      }
+    }
+    .auth {
+      img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+      }
+
+      &:hover img {
+        outline: 1px solid $orange;
+      }
+    }
+  }
+
+  .carts {
+    border-radius: 0.5em;
+    background-color: $white;
+    box-shadow: 0 27px 79px rgba(#000, 0.06);
+    position: absolute;
+    right: 0;
+    top: 90%;
+    max-width: 280px;
+    min-width: 279px;
+    padding: 0 0 1.2em 0;
+
+    p {
+      font-size: 0.9rem;
+      padding: 1em;
+      border-bottom: 1px solid $grayish-blue;
+    }
+
+    &-items {
+      list-style-type: none;
+      margin-top: 1em;
+    }
+
+    &-item {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 1em;
+    }
+
+    &-checkout-btn {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      padding: 1em 0;
+      background-color: $orange;
+      color: $white;
+      border-radius: 0.8em;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .cart {
+      display: flex;
+      align-items: center;
+
+      &-info {
+        display: flex;
+        line-height: 0.2;
+
+        &--img {
+          width: 44px;
+          height: 44px;
+          border-radius: 3px;
+        }
+        &--content {
+          p {
+            font-size: 0.72rem;
+            color: $grayish-blue;
+            border-bottom: none;
+            strong {
+              color: $black;
+            }
+          }
+        }
+        width: 97%;
+      }
+    }
+  }
+  .hide-carts {
+    display: none;
+  }
+}
