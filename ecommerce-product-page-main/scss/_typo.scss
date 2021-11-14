@@ -1,0 +1,34 @@
+.subtitle {
+  letter-spacing: 1.1px;
+  color: $orange;
+  font-size: 1.1rem;
+  &--upper {
+    text-transform: uppercase;
+  }
+  margin-bottom: 1.5em;
+
+  @include respond(tablet) {
+    font-size: 0.9rem;
+  }
+}
+
+.title {
+  font-size: 2.1rem;
+  color: $black;
+
+  @include respond(tablet) {
+    font-size: 1.8rem;
+  }
+}
+
+.para {
+  font-size: 1rem;
+  color: $dark-grayish-blue;
+  margin-top: 2em;
+  margin-bottom: 1.8em;
+  line-height: 1.6;
+
+  @include respond(tablet) {
+    font-size: 0.85rem;
+  }
+}
