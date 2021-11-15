@@ -8,6 +8,15 @@
   max-width: 320px;
   min-width: 319px;
   padding: 0 0 1.2em 0;
+  z-index: 2500;
+
+  &-wrapper > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3em 0;
+  }
 
   p {
     font-size: 0.9rem;
@@ -76,4 +85,9 @@
 }
 .hide-carts {
   display: none;
+}
+
+.empyt-list {
+  text-align: center;
+  padding: 2em 0;
 }

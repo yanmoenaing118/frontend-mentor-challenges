@@ -1,0 +1,132 @@
+.product-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  transition: all 0.2s ease-in;
+
+  &--hide {
+    transform: scale(0);
+  }
+}
+
+.active-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.7);
+}
+
+.active {
+  &-image {
+    &-container {
+      max-width: 400px;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include respond(tablet) {
+        width: 100%;
+      }
+
+      @include respond(mobile) {
+        width: 92.5%;
+        margin: 0 auto;
+      }
+    }
+    &-item {
+      display: block;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+      &-list {
+        margin-top: 1.2em;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        li {
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+          margin-right: 1em;
+          &:last-child {
+            margin-right: 0;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+          }
+        }
+
+        &--active {
+          cursor: auto;
+          border: 2px solid $orange;
+          border-radius: 10px;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#fff, 0.4);
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &--next {
+    margin-top: -7em;
+    margin-right: -10px;
+  }
+
+  &--prev {
+    margin-top: -7em;
+    margin-left: -10px;
+  }
+}
+
+.active-product-close-btn {
+  position: absolute;
+  right: 5px;
+  top: -0.8em;
+  width: 10px;
+  height: 10px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  line-height: 0.6;
+}
