@@ -1,0 +1,137 @@
+header {
+  box-shadow: 0 0px 2px rgba(#000, 0.1);
+}
+.appbar {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 76%;
+  margin: auto;
+
+  .mobile-menu {
+    display: none;
+    @include respond(mobile) {
+      display: block;
+      width: 15px;
+    }
+  }
+
+  .logo {
+    margin-right: 4em;
+    max-width: 110px;
+    min-width: 109px;
+    img {
+      width: 100%;
+    }
+    @include respond(mobile) {
+      max-width: 80px;
+      min-width: 79px;
+      margin-left: 1em;
+    }
+  }
+
+  .navigation {
+    height: 100%;
+    ul {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      height: 100%;
+      li {
+        margin-right: 1.2em;
+        height: 100%;
+
+        a {
+          @include flex-center;
+          height: 100%;
+          text-decoration: none;
+          color: $dark-grayish-blue;
+          font-size: 0.95rem;
+
+          &:hover {
+            border-bottom: 3px solid $orange;
+          }
+
+          @include respond(tablet) {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+
+  .cart-auth {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    @include flex-center;
+    position: relative;
+
+    .cart-icon {
+      margin-right: 2.46em;
+      position: relative;
+      height: 40px;
+      width: 40px;
+      @include flex-center;
+      cursor: pointer;
+
+      &-no {
+        border-radius: 10px;
+        padding: 0.1em 0.6em;
+        display: inline-block;
+        font-size: 0.65rem;
+        background-color: $orange;
+        position: absolute;
+        top: 1px;
+        right: 4px;
+        color: $white;
+        @include respond(mobile) {
+          font-size: 0.5rem;
+          top: -2px;
+          right: -3px;
+        }
+      }
+      @include respond(mobile) {
+        width: 20px;
+        height: 20px;
+        margin-right: 1em;
+      }
+    }
+    .auth {
+      img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        @include respond(mobile) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &:hover img {
+        outline: 1px solid $orange;
+      }
+    }
+
+    @include respond(mobile) {
+      padding-right: 0em;
+    }
+  }
+
+  @include respond(tablet) {
+    height: 60px;
+    max-width: 85%;
+    margin: auto;
+  }
+  @include respond(mobile) {
+    height: 48px;
+    max-width: 90%;
+    margin: auto;
+  }
+}

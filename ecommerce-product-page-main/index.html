@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="wrapper">
+        <div class="appbar">
+          <img class="mobile-menu" src="images/icon-menu.svg" alt="mobile Menu">
+          <div class="logo">
+            <a href="#">
+              <img src="images/logo.svg" alt="Sneaker Company" />
+            </a>
+          </div>
+          <nav class="navigation">
+            <ul>
+              <li>
+                <a href="#">Collections</a>
+              <li> <a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              </li>
+            </ul>
+          </nav>
+          <nav class="sidebar">
+            <div>
+              <button class="close"><img src="images/icon-close.svg" alt=""></button>
+              <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="cart-auth">
+            <div class="cart-icon">
+              <span class="cart-icon-no">3</span>
+              <img src="images/icon-cart.svg" alt="Add to Cart" />
+            </div>
+            <div class="auth">
+              <a href="#"><img src="images/image-avatar.png" alt="Image Avatar" /></a>
+            </div>
+          </div>
+
+          <div class="carts hide-carts">
+            <p>Cart</p>
+            <div class="carts-wrapper">
+              <ul class="carts-items">
+             
+            </ul>
+            <button class="carts-checkout-btn">
+              Checkout
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section-product">
+      <div class="container">
+        <div class="wrapper">
+          <div class="product">
+            <div class="product-image">
+              <div class="product-image-container">
+                <div class="product-image-item">
+                  <img src="images/image-product-1.jpg" alt="">
+                </div>
+                <ul class="product-image-item-list">
+                  <li class="product-image-item-list--active"><img src="images/image-product-1-thumbnail.jpg" alt="">
+                  </li>
+                  <li><img src="images/image-product-2-thumbnail.jpg" alt=""></li>
+                  <li><img src="images/image-product-3-thumbnail.jpg" alt=""></li>
+                  <li><img src="images/image-product-4-thumbnail.jpg" alt=""></li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="subtitle subtitle--upper">Sneaker Company</h3>
+              <h2 class="title">Fall Limited Edition Sneakers</h2>
+              <p class="para">These low-profile sneakers are your perfect casual wear companion. Featuring a
+                durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+              <div class="product-info--price">
+                <div><strong>$125.00</strong> <span>50%</span></div>
+                <p>$250.00</p>
+              </div>
+              <div class="add-cart">
+                <div class="add-cart--no">
+                  <button class="add-cart--inc">-</button>
+                  <span class="add-cart--count">0</span>
+                  <button class="add-cart--dec">+</button>
+                </div>
+                <button class="add-cart--btn">
+                  <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                      fill="#fff" fill-rule="nonzero" />
+                  </svg> &nbsp;&nbsp;
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product-active product-active--hide">
+      <div class="active-backdrop"></div>
+      <div class="active-image-container">
+        <div class="active-image-item">
+          <img src="images/image-product-1.jpg" alt="">
+        </div>
+        <ul class="active-image-item-list">
+          <li><img src="images/image-product-1-thumbnail.jpg" alt="img 0"></li>
+          <li><img src="images/image-product-2-thumbnail.jpg" alt="img 1"></li>
+          <li><img src="images/image-product-3-thumbnail.jpg" alt="img 2"></li>
+          <li><img src="images/image-product-4-thumbnail.jpg" alt="img 3"></li>
+        </ul>
+
+        <button class="active-product-close-btn">
+          <img src="images/icon-close.svg" alt="">
+        </button>
+        <div class="active-arrows">
+          <button class="active-arrows-arrow active-arrows--prev"><img src="images/icon-previous.svg" alt=""></button>
+          <button class="active-arrows-arrow active-arrows--next"><img src="images/icon-next.svg" alt=""></button>
+        </div>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <!--
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
