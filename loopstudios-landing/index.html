@@ -57,6 +57,10 @@
               </ul>
             </nav>
           </div>
+
+          <div class="mobile-menu">
+            <img src="images/icon-hamburger.svg" alt="Mobile Menu" />
+          </div>
         </div>
         <div class="hero">
           <div class="hero-textbox">
@@ -72,7 +76,13 @@
       <section class="section-interactive">
         <div class="container">
           <div class="interactive">
-            <div class="interactive-left"></div>
+            <div class="interactive-left">
+              <img
+                src="images/mobile/image-interactive.jpg"
+                alt="interactive"
+                class="interactive-img-mobile"
+              />
+            </div>
 
             <div class="interactive-right interactive-grid">
               <div
@@ -150,6 +160,8 @@
                 <p>Make it fisheye</p>
               </div>
             </div>
+
+            <a href="/" class="see-all-btn-mobile">see all</a>
           </div>
         </div>
       </section>
@@ -194,6 +206,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const mobileSidebar = document.querySelector(".mobile-sidebar");
+      const closeSidebarBtn = document.querySelector(
+        ".mobile-sidebar > div button"
+      );
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      mobileMenu.addEventListener("click", () => {
+        mobileSidebar.classList.add("show-sidebar");
+      });
+
+      closeSidebarBtn.addEventListener("click", () => {
+        mobileSidebar.classList.remove("show-sidebar");
+      });
+    </script>
 
     <!-- <nav class="navigation navigation--footer">
       <ul>

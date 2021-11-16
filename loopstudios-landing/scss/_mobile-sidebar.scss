@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   background-color: $black;
-  left: 0%;
+  left: -100%;
   top: 0;
   transition: all 0.3s ease-in;
   & > div {
@@ -40,9 +40,16 @@
       }
     }
   }
+}
 
-  .close {
-    border: none;
-    background-color: transparent;
+.show-sidebar {
+  left: 0%;
+}
+
+.mobile-menu {
+  display: none;
+
+  @include respond(mobile) {
+    display: block;
   }
 }

@@ -10,6 +10,19 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      .interactive-img-mobile {
+        display: none;
+        @include respond(mobile) {
+          display: block;
+          width: 100%;
+          margin-bottom: 2.1em;
+        }
+      }
+
+      @include respond(mobile) {
+        background: none;
+      }
     }
 
     &-right {
@@ -25,6 +38,10 @@
       &--item {
         &-bg {
           background-image: linear-gradient(to bottom right, #cf73d1, #b464c1);
+
+          @include respond(mobile) {
+            display: none;
+          }
         }
 
         &-info {
@@ -34,7 +51,18 @@
           display: grid;
           grid-template-columns: 80px 1fr 80px;
           grid-template-rows: 80px 1fr;
+
+          @include respond(mobile) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+          }
         }
+      }
+
+      @include respond(mobile) {
+        display: flex;
+        justify-content: center;
       }
     }
 
@@ -51,13 +79,37 @@
         font-size: 2.6rem;
         text-transform: uppercase;
         margin-bottom: 1em;
+
+        @include respond(mobile) {
+          font-size: 2rem;
+          margin-bottom: 0.6em;
+        }
       }
       p {
         line-height: 1.46;
         color: $dark-gray;
         font-size: 0.9rem;
+
+        @include respond(mobile) {
+          line-height: 1.7;
+          font-size: 1rem;
+        }
+      }
+
+      @include respond(mobile) {
+        text-align: center;
+        padding: 0 2em;
+        font-weight: bold;
       }
     }
+
+    @include respond(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  @include respond(mobile) {
+    padding: 4em 1.8em;
   }
 }
 
@@ -76,6 +128,9 @@
         line-height: 0.95;
         font-size: 2.6rem;
         text-transform: uppercase;
+        @include respond(mobile) {
+          font-size: 2rem;
+        }
       }
 
       a {
@@ -92,6 +147,14 @@
           color: $white;
           background-color: $black;
         }
+        @include respond(mobile) {
+          display: none;
+        }
+      }
+
+      @include respond(mobile) {
+        justify-content: center;
+        margin-bottom: 2em;
       }
     }
     &-grid-items {
@@ -216,5 +279,36 @@
         }
       }
     }
+  }
+
+  .see-all-btn-mobile {
+    display: none;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $very-dark-gray;
+    border: 1px solid $very-dark-gray;
+    display: inline-block;
+    padding: 0.35em 2.6em;
+    font-size: 0.86rem;
+    letter-spacing: 2px;
+    transition: all 0.6s ease;
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+
+    @include respond(mobile) {
+      margin: auto;
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 2em;
+    }
+  }
+
+  @include respond(mobile) {
+    padding-bottom: 1.5em;
   }
 }

@@ -4,6 +4,33 @@
   &-wrapper {
     display: flex;
     justify-content: space-between;
+    @include respond(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  .navigation {
+    display: block;
+    ul {
+      @include respond(mobile) {
+        flex-direction: column;
+      }
+
+      li {
+        @include respond(mobile) {
+          margin-bottom: 2em;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    @include respond(mobile) {
+      align-items: center;
+    }
   }
 
   .logo {
@@ -26,6 +53,9 @@
     p {
       color: $very-dark-gray;
       font-size: 0.9rem;
+    }
+    @include respond(mobile) {
+      align-items: center;
     }
   }
 }

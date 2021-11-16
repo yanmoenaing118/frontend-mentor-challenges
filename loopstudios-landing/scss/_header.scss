@@ -35,6 +35,13 @@
       color: $white;
       text-transform: uppercase;
       width: 60.5%;
+
+      @include respond(mobile) {
+        font-size: 2.5rem;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: -4em;
+      }
     }
   }
 }
