@@ -1,0 +1,46 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($black, 0.45),
+      rgba($black, 0.65)
+    ),
+    url("./../images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  .appbar {
+    padding: 0 1em;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero {
+    height: calc(95vh - 145px);
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+
+    &-textbox {
+      margin-top: -1.05em;
+      margin-right: 0.35em;
+      border: 1px solid $white;
+      padding: 0.27em;
+      font-family: $font-josefin;
+      font-size: 4.75rem;
+      font-weight: 100;
+      color: $white;
+      text-transform: uppercase;
+      width: 60.5%;
+    }
+  }
+}
+
+.logo {
+  img {
+    width: 170px;
+  }
+}

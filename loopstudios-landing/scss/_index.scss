@@ -1,0 +1,26 @@
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+$font-alata: "Alata", sans-serif;
+$font-josefin: "Josefin Sans", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: $font-alata;
+}
+
+@mixin adjust-bgimage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}

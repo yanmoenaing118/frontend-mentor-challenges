@@ -1,0 +1,39 @@
+.navigation {
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin-right: 2.5em;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        text-decoration: unset;
+        color: $white;
+        font-weight: 400;
+        position: relative;
+        font-size: 0.8rem;
+        font-family: $font-alata;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -10px;
+          width: 0%;
+          height: 1.5px;
+          background-color: $white;
+          margin: 0 auto;
+          transition: all 0.2s ease;
+        }
+
+        &:hover {
+          &::after {
+            width: 56%;
+          }
+        }
+      }
+    }
+  }
+}

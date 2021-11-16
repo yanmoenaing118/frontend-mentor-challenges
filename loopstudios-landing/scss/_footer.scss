@@ -1,0 +1,31 @@
+.footer {
+  background-color: $black;
+  padding: 3em 0;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-bottom: 1em;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .social {
+      display: flex;
+      margin-bottom: 1em;
+
+      a {
+        margin-left: 0.8em;
+      }
+    }
+
+    p {
+      color: $very-dark-gray;
+      font-size: 0.9rem;
+    }
+  }
+}
