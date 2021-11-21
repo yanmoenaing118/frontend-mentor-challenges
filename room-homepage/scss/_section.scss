@@ -1,0 +1,56 @@
+main {
+  display: flex;
+  height: calc(100vh - 68vh);
+  .first {
+    flex: 1;
+    background-image: url("../images/image-about-dark.jpg");
+    @include respond(mobile) {
+      height: 220px;
+    }
+  }
+  .second {
+    flex: 1.4;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about {
+      width: 90%;
+      line-height: 1.4;
+      h2 {
+        letter-spacing: 3px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $very-dark-gray;
+        margin-bottom: 1em;
+      }
+      p {
+        font-size: 12px;
+        color: $very-dark-gray;
+        font-weight: 400;
+        @include respond(mobile) {
+          font-size: 16px;
+        }
+      }
+
+      @include respond(mobile) {
+        width: 95%;
+        margin: 0 auto;
+        padding: 3em;
+      }
+    }
+  }
+  .third {
+    background-image: url("../images/image-about-light.jpg");
+    flex: 1;
+    @include respond(mobile) {
+      height: 280px;
+    }
+  }
+
+  @include respond(mobile) {
+    display: block;
+    height: auto;
+  }
+}
