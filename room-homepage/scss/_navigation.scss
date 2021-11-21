@@ -38,5 +38,26 @@
         }
       }
     }
+
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+
+  .menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+
+    @include respond(mobile) {
+      display: block;
+    }
+  }
+
+  @include respond(mobile) {
+    width: 60%;
+    justify-content: space-between;
+    margin-left: 34px;
   }
 }
