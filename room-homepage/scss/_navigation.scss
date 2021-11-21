@@ -1,0 +1,42 @@
+.navigation {
+  margin: 50px 0 0 50px;
+  display: flex;
+
+  .logo {
+    margin-right: 5em;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    li {
+      margin-left: 2em;
+      a {
+        color: $white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: 400;
+
+        position: relative;
+
+        &::after {
+          content: "";
+          display: flex;
+          align-items: center;
+          position: absolute;
+          bottom: -2px;
+          height: 1.6px;
+          background-color: $white;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
