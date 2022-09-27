@@ -11,7 +11,7 @@ interface MyNotification {
   ago: string;
   photo: string | undefined;
   isGroup: boolean;
-  message: string
+  message: string | undefined;
 }
 
 const notifications: MyNotification[] = [
@@ -26,7 +26,36 @@ const notifications: MyNotification[] = [
     ago: "1m ago",
     photo: "image-chess.webp",
     isGroup: false,
-    message: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. "
+    message:
+      "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. ",
+  },
+
+  {
+    user: {
+      name: "Angela",
+      image: "avatar-kimberly-smith.webp",
+    },
+    action: "followed you",
+    info: "",
+    done: false,
+    ago: "3d ago",
+    photo: undefined,
+    isGroup: false,
+    message: undefined,
+  },
+
+  {
+    user: {
+      name: "Jocob Thompson",
+      image: "avatar-mark-webber.webp",
+    },
+    action: "has joined your group",
+    isGroup: true,
+    info: "Chess Club",
+    ago: "1 day ago",
+    photo: undefined,
+    message: undefined,
+    done: false,
   },
 ];
 
@@ -66,6 +95,16 @@ function createNotiItem(noti: MyNotification) {
   notiAbout.append(notiAboutUser);
   notiAbout.append(notiAboutActioni);
 
+  if (noti.info) {
+    const notiAboutInfo = document.createElement("span");
+    notiAboutInfo.classList.add("h2", "noti-about__info");
+    notiAboutInfo.textContent = noti.info;
+    if (noti.isGroup) {
+      notiAboutInfo.classList.add("group");
+    }
+    notiAbout.append(notiAboutInfo);
+  }
+
   if (!noti.done) {
     const notiRead = document.createElement("span");
     notiRead.classList.add("read");
@@ -83,20 +122,37 @@ function createNotiItem(noti: MyNotification) {
 
   const notiAgo = document.createElement("div");
   notiAgo.textContent = noti.ago;
-  const notiMessage = document.createElement("p");
-  notiMessage.classList.add("noti-message");
-  notiMessage.textContent = noti.message;
 
+  notiContent.append(notiAbout, notiAgo);
 
-  notiContent.append(notiAbout, notiAgo, notiMessage);
+  if (noti.message) {
+    const notiMessage = document.createElement("p");
+    notiMessage.classList.add("noti-message");
+    notiMessage.textContent = noti.message;
+    notiContent.append(notiMessage);
+  }
 
   notiItem.append(notiContent);
   return notiItem;
 }
 
-const notiList: any = $(".noti-list");
+function renderNotiCount(count: string | number) {
+    const notiBadge: any = $(".badge");
+    notiBadge.textContent = count;
+}
 
-notifications.forEach((el: MyNotification) => {
-  const item = createNotiItem(el);
-  notiList.appendChild(item);
-});
+function renderNofications(notifications: MyNotification[]) {
+  const notiList: any = $(".noti-list");
+
+  notifications.forEach((el: MyNotification) => {
+    const item = createNotiItem(el);
+    notiList.appendChild(item);
+  });
+  renderNotiCount(notifications.length)
+}
+
+
+
+renderNofications(notifications);
+
+
