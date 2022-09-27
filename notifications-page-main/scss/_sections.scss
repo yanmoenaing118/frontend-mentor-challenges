@@ -1,0 +1,21 @@
+.container {
+    background-color: $white;
+    height: 1000px;
+    max-width: $max-width;
+    margin-inline: auto;
+    border-radius: $container-radius;
+    box-shadow: $container-shadow;
+    padding: 2.6rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        span {
+            margin-left: 1.2rem;
+        }
+    }
+}

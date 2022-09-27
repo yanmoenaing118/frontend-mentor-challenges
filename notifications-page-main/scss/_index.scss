@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol,li {
+    list-style-type: none;
+}
+
+button,a {
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $para-font-size;
+    font-family: $font-family;
+    background-color: $light-grayish-blue-1;
+    color: $grayish-blue;
+    margin: 30px;
+}
+
