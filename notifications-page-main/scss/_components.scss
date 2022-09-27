@@ -5,3 +5,12 @@
     font-size: 1.4rem;
     border-radius: 4px;
 }
+
+.read {
+
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $primary-red;
+}

@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
+    <link rel="stylesheet" href="font/stylesheet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <body>
+    <!-- <h1>Frontend Mentor | Notifications page</h1> -->
 
-  <link rel="stylesheet" href="font/stylesheet.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Frontend Mentor | Notifications page</title>
+    <main class="container">
+      <header class="header">
+        <h1 class="h1">
+          Notifications
 
+          <span class="badge">3</span>
+        </h1>
 
-</head>
+        <div class="para">Mark all as read</div>
+      </header>
 
-<body>
+      <section class="noti-list">
+        <div class="noti-item" data-done="false">
+          <figure class="noti-avatar">
+            <img
+              src="assets/images/avatar-angela-gray.webp"
+              alt="Avatar Image"
+            />
+          </figure>
 
-  <!-- <h1>Frontend Mentor | Notifications page</h1> -->
+          <div class="noti-content">
+            <div class="noti-about">
+              <span class="h2 noti-about__user">Mark Webber</span>
+              <span class="para noti-about__action"
+                >reacted to your recent post</span
+              >
+              <span class="h2 noti-about__info"
+                >My first tournament today!</span
+              >
+              <span class="read"></span>
 
-  <main class="container">
+              <figure class="noti-photo">
+                <img src="assets/images/image-chess.webp" alt="">
+              </figure>
+            </div>
+            <div class="noti-ago">3d ago</div>
 
-    <header class="header">
-      <h1 class="h1">Notifications
-
-        <span class="badge">3</span>
-
-      </h1>
-
-      <div class="para">Mark all as read</div>
-    </header>
-
-    <section class="noti-list">
-
-    </section>
-
-  </main>
-
-</body>
-
-
-
-
+            <p class="noti-message">
+              Hello, thanks for setting up the Chess Club. I've been a member
+              for a few weeks now and I'm already having lots of fun and
+              improving my game.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
 <!-- Notifications 3
 
