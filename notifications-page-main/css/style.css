@@ -47,8 +47,12 @@ body {
   font-family: "Plus Jakarta Sans";
   background-color: hsl(211deg, 68%, 94%);
   color: hsl(219deg, 14%, 63%);
-  margin: 30px;
   line-height: 1.6;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 30px;
+  }
 }
 
 .badge {
@@ -70,11 +74,16 @@ body {
 .container {
   background-color: hsl(0deg, 0%, 100%);
   height: 1000px;
-  max-width: 880px;
-  margin-inline: auto;
-  border-radius: 2%;
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
-  padding: 5rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 880px;
+    margin-inline: auto;
+    border-radius: 2%;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+    padding: 5rem;
+  }
 }
 
 .header {
@@ -82,16 +91,22 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 .header h1 span {
   margin-left: 1.2rem;
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    margin-top: 0;
+  }
 }
 
 .noti-item {
   background-color: hsl(210deg, 60%, 98%);
   display: flex;
   align-items: flex-start;
-  padding: 1.5rem 1.6rem;
+  padding: 1.9rem 1.6rem;
   border-radius: 10px;
   gap: 16px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -121,13 +136,19 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  line-height: 1;
 }
 .noti-about__user {
   color: hsl(224deg, 21%, 14%);
+  padding: 0 0.5rem;
+}
+.noti-about__action {
+  padding: 0 0.5rem;
 }
 .noti-about__info {
   color: hsl(219deg, 12%, 42%);
+  padding: 0 0.5rem;
 }
 .noti-about__info.group {
   color: hsl(219deg, 85%, 26%);
@@ -138,7 +159,7 @@ body {
   min-width: 40px;
   display: inline-block;
   border-radius: 4px;
-  margin-left: auto;
+  margin-left: 0.5rem;
 }
 .noti-photo img {
   width: 100%;
@@ -146,6 +167,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (min-width: 1200px) {
+  .noti-photo {
+    margin-left: 2rem;
+  }
 }
 .noti-message {
   border: 1px solid hsl(205deg, 33%, 90%);

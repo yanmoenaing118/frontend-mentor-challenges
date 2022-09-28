@@ -1,3 +1,14 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var notifications = [
     {
         user: {
@@ -10,7 +21,7 @@ var notifications = [
         ago: "1m ago",
         photo: "image-chess.webp",
         isGroup: false,
-        message: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. "
+        message: undefined
     },
     {
         user: {
@@ -37,6 +48,19 @@ var notifications = [
         photo: undefined,
         message: undefined,
         done: false
+    },
+    {
+        user: {
+            name: "Rizky Hasanuddin",
+            image: "avatar-rizky-hasanuddin.webp"
+        },
+        action: "sent you a private message",
+        ago: "5 days ago",
+        message: "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. ",
+        done: true,
+        isGroup: false,
+        photo: undefined,
+        info: undefined
     },
 ];
 function $(selector) {
@@ -107,10 +131,23 @@ function renderNotiCount(count) {
 }
 function renderNofications(notifications) {
     var notiList = $(".noti-list");
+    notiList.innerHTML = "";
     notifications.forEach(function (el) {
         var item = createNotiItem(el);
         notiList.appendChild(item);
     });
     renderNotiCount(notifications.length);
 }
+function markRead(notifications) {
+    return notifications.map(function (noti) { return (__assign(__assign({}, noti), { done: noti.done ? noti.done : !noti.done })); });
+}
+var markReadButton = $(".mark");
 renderNofications(notifications);
+markReadButton === null || markReadButton === void 0 ? void 0 : markReadButton.addEventListener("click", function () {
+    var leftToReadNoti = notifications.filter(function (noti) { return !noti.done; });
+    if (leftToReadNoti.length > 0) {
+        var notiList = markRead(notifications);
+        renderNofications(notiList);
+        notifications = notiList;
+    }
+});

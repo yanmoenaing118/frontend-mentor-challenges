@@ -3,3 +3,17 @@
     justify-content: center;
     align-items: center;  
 }
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+    
+    @if $breakpoint == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+}

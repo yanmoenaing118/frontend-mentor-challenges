@@ -1,11 +1,17 @@
 .container {
   background-color: $white;
   height: 1000px;
-  max-width: $max-width;
-  margin-inline: auto;
-  border-radius: $container-radius;
-  box-shadow: $container-shadow;
-  padding: 5rem;
+  padding: 1rem;
+ 
+  @include respond(desktop) {
+    max-width: $max-width;
+    margin-inline: auto;
+    border-radius: $container-radius;
+    box-shadow: $container-shadow;
+    padding: 5rem;
+  }
+
+
 }
 
 .header {
@@ -13,11 +19,16 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  margin-top: 2rem;
 
   h1 {
     span {
       margin-left: 1.2rem;
     }
+  }
+
+  @include respond(desktop) {
+    margin-top: 0;
   }
 }
 
@@ -29,7 +40,7 @@
     background-color: $very-light-grayish-blue;
     display: flex;
     align-items: flex-start;
-    padding: 1.5rem 1.6rem;
+    padding: 1.9rem 1.6rem;
     border-radius: 10px;
     gap: 16px;
     box-shadow: 0 3px 10px rgba(#000, 0.1);
@@ -65,19 +76,26 @@
     flex: 1;
     display: flex;
     align-items: center;
-    gap: 8px;
+    flex-wrap: wrap;
+    line-height: 1;
+    
     &__user {
       color: $very-dark-blue;
+      padding: 0 .5rem;
     }
     &__action {
+      padding: 0 .5rem;
     }
     &__info {
       color: $dark-grayish-blue;
+      padding: 0 .5rem;
 
       &.group {
         color: $primary-blue;
       }
     }
+
+ 
   }
 
   &-photo {
@@ -86,7 +104,7 @@
     min-width: $avatar-size;
     display: inline-block;
     border-radius: 4px;
-    margin-left: auto;
+    margin-left: .5rem;
 
     img {
       width: 100%;
@@ -94,6 +112,12 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+
+
+    @include respond(desktop) {
+      margin-left: 2rem;
     }
   }
 

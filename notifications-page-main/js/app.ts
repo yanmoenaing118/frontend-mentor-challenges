@@ -14,7 +14,9 @@ interface MyNotification {
   message: string | undefined;
 }
 
-const notifications: MyNotification[] = [
+type NotificationsArray = Array<MyNotification>;
+
+let notifications: NotificationsArray = [
   {
     user: {
       name: "Mark Webber",
@@ -26,8 +28,7 @@ const notifications: MyNotification[] = [
     ago: "1m ago",
     photo: "image-chess.webp",
     isGroup: false,
-    message:
-      "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. ",
+    message: undefined,
   },
 
   {
@@ -56,6 +57,21 @@ const notifications: MyNotification[] = [
     photo: undefined,
     message: undefined,
     done: false,
+  },
+
+  {
+    user: {
+      name: "Rizky Hasanuddin",
+      image: "avatar-rizky-hasanuddin.webp",
+    },
+    action: "sent you a private message",
+    ago: "5 days ago",
+    message:
+      "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. ",
+    done: true,
+    isGroup: false,
+    photo: undefined,
+    info: undefined,
   },
 ];
 
@@ -137,22 +153,40 @@ function createNotiItem(noti: MyNotification) {
 }
 
 function renderNotiCount(count: string | number) {
-    const notiBadge: any = $(".badge");
-    notiBadge.textContent = count;
+  const notiBadge: any = $(".badge");
+  notiBadge.textContent = count;
 }
 
-function renderNofications(notifications: MyNotification[]) {
+function renderNofications(notifications: NotificationsArray) {
   const notiList: any = $(".noti-list");
+
+  notiList.innerHTML = "";
 
   notifications.forEach((el: MyNotification) => {
     const item = createNotiItem(el);
     notiList.appendChild(item);
   });
-  renderNotiCount(notifications.length)
+
+  renderNotiCount(notifications.length);
 }
 
+function markRead(notifications: NotificationsArray): NotificationsArray {
+  return notifications.map((noti) => ({
+    ...noti,
+    done: noti.done ? noti.done : !noti.done,
+  }));
+}
 
+const markReadButton = $(".mark");
 
 renderNofications(notifications);
 
+markReadButton?.addEventListener("click", () => {
+  const leftToReadNoti = notifications.filter((noti) => !noti.done);
 
+  if (leftToReadNoti.length > 0) {
+    const notiList = markRead(notifications);
+    renderNofications(notiList);
+    notifications = notiList;
+  }
+});

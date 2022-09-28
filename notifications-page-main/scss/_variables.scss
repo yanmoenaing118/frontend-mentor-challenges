@@ -4,8 +4,8 @@ $desktop-breakpoint: 1440px;
 $max-width: 880px;
 $avatar-size: 40px;
 
-$container-radius:2%;
-$container-shadow: 0 30px 30px rgba(#000,0.1);
+$container-radius: 2%;
+$container-shadow: 0 30px 30px rgba(#000, 0.1);
 
 $primary-red: hsl(1, 90%, 64%);
 $primary-blue: hsl(219, 85%, 26%);
@@ -25,3 +25,8 @@ $weight-200: 200;
 $weight-300: 300;
 $weight-500: 500;
 $weight-600: 600;
+
+@include respond(mobile) {
+  $avatar-size: 35px;
+  $para-font-size: 1.4rem;
+}
