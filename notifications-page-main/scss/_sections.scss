@@ -1,0 +1,134 @@
+.container {
+  background-color: $white;
+  height: 1000px;
+  padding: 1rem;
+ 
+  @include respond(desktop) {
+    max-width: $max-width;
+    margin-inline: auto;
+    border-radius: $container-radius;
+    box-shadow: $container-shadow;
+    padding: 5rem;
+  }
+
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+
+  h1 {
+    span {
+      margin-left: 1.2rem;
+    }
+  }
+
+  @include respond(desktop) {
+    margin-top: 0;
+  }
+}
+
+.noti {
+  &-list {
+  }
+
+  &-item {
+    background-color: $very-light-grayish-blue;
+    display: flex;
+    align-items: flex-start;
+    padding: 1.9rem 1.6rem;
+    border-radius: 10px;
+    gap: 16px;
+    box-shadow: 0 3px 10px rgba(#000, 0.1);
+
+    margin-bottom: 2rem;
+
+    &[data-done="true"] {
+      background-color: $white;
+      box-shadow: none;
+
+      .read {
+        display: none;
+      }
+    }
+  }
+
+  &-avatar {
+    width: $avatar-size;
+    min-width: $avatar-size;
+    height: $avatar-size;
+
+    @include flex-center();
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &-about {
+    
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 1;
+    
+    &__user {
+      color: $very-dark-blue;
+      padding: 0 .5rem;
+    }
+    &__action {
+      padding: 0 .5rem;
+    }
+    &__info {
+      color: $dark-grayish-blue;
+      padding: 0 .5rem;
+
+      &.group {
+        color: $primary-blue;
+      }
+    }
+
+ 
+  }
+
+  &-photo {
+    height: $avatar-size;
+    width: $avatar-size;
+    min-width: $avatar-size;
+    display: inline-block;
+    border-radius: 4px;
+    margin-left: .5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+
+
+    @include respond(desktop) {
+      margin-left: 2rem;
+    }
+  }
+
+  &-message {
+    border: 1px solid $light-grayish-blue-2;
+    padding: 1.6rem 1.8rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
+  &-ago {
+    font-size: 1.4rem;
+  }
+}
