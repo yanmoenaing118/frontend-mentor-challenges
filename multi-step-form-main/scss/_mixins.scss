@@ -1,0 +1,11 @@
+@mixin adjustbg($size) {
+    background-repeat: no-repeat;
+    background-size: $size;
+}
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

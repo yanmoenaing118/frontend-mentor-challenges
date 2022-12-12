@@ -1,0 +1,23 @@
+.steps {
+    &-mobile {
+        @include flex-center;
+        padding-top: 2rem;
+        ul {
+            display: flex;
+            gap: .8rem;
+            align-items: center;
+            list-style: none;
+            li {
+                width: 35px;
+                height: 35px;
+                border: 2px solid $white;
+                color: $white;
+                border-radius: 50%;
+                @include flex-center;
+            }
+        }
+    }
+
+    &-desktop {}
+
+}

@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url(../assets/fonts/Ubuntu-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../assets/fonts/Ubuntu-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../assets/fonts/Ubuntu-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.step_main_title {
+    color: $white;
+}
+
+.step_sub_title {
+    color: $light-gray;
+}
+
+.card_main_title {
+    color: $marine-blue;
+}
+
+.card_sub_title {
+    color: $cool-gray;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.semi-bold-text {
+    font-weight: 500;
+}
+
+.para-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

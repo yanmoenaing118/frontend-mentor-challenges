@@ -1,0 +1,107 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+.step_main_title {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.step_sub_title {
+  color: hsl(229deg, 24%, 87%);
+}
+
+.card_main_title {
+  color: hsl(213deg, 96%, 18%);
+}
+
+.card_sub_title {
+  color: hsl(231deg, 11%, 63%);
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.semi-bold-text {
+  font-weight: 500;
+}
+
+.para-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Ubuntu";
+  background-color: hsl(206deg, 94%, 87%);
+}
+
+.container {
+  max-width: min(100%, 800px);
+}
+
+.sidebar-mobile {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(../assets/images/bg-sidebar-mobile.svg);
+  height: 35vh;
+}
+.sidebar-desktop {
+  background-image: url(../assets/images/bg-sidebar-desktop.svg);
+}
+
+.steps-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.steps-mobile ul {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  list-style: none;
+}
+.steps-mobile ul li {
+  width: 35px;
+  height: 35px;
+  border: 2px solid hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

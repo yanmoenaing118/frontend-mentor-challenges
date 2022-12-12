@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $ff-ubuntu;
+  background-color: $light-blue;
+}
+
+.container {
+  max-width: min(100%, 800px);
+}
+
+.sidebar {
+  &-mobile {
+    @include adjustbg(100%);
+    background-image: url(../assets/images/bg-sidebar-mobile.svg);
+    height: 35vh;
+  }
+
+  &-desktop {
+    background-image: url(../assets/images/bg-sidebar-desktop.svg);
+  }
+}
+
+.content {
+}
