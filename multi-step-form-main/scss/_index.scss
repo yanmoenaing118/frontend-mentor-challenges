@@ -22,9 +22,9 @@ body {
 
 .sidebar {
   &-mobile {
-    @include adjustbg(100%);
+    @include adjustbg(cover);
     background-image: url(../assets/images/bg-sidebar-mobile.svg);
-    height: 35vh;
+    height: 25vh;
   }
 
   &-desktop {
@@ -33,4 +33,25 @@ body {
 }
 
 .content {
+  &-mobile {
+    &__card {
+      background-color: $white;
+      max-width: 320px;
+      margin: 0 auto;
+      transform: translateY(-20%);
+      border-radius: 1rem;
+      box-shadow: 0 10px 10px rgba(#000000, 0.3);
+      padding: 2rem;
+
+      header {
+        p {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &__footer {
+      background-color: $white;
+    }
+  }
 }

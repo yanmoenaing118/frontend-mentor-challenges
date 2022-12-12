@@ -26,6 +26,7 @@
 
 .card_main_title {
   color: hsl(213deg, 96%, 18%);
+  font-size: 2rem;
 }
 
 .card_sub_title {
@@ -73,12 +74,28 @@ body {
 
 .sidebar-mobile {
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-image: url(../assets/images/bg-sidebar-mobile.svg);
-  height: 35vh;
+  height: 25vh;
 }
 .sidebar-desktop {
   background-image: url(../assets/images/bg-sidebar-desktop.svg);
+}
+
+.content-mobile__card {
+  background-color: hsl(0deg, 0%, 100%);
+  max-width: 320px;
+  margin: 0 auto;
+  transform: translateY(-20%);
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+.content-mobile__card header p {
+  margin-top: 1rem;
+}
+.content-mobile__footer {
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 .steps-mobile {
