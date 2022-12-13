@@ -15,10 +15,7 @@
     <title>Frontend Mentor | Multi-step form</title>
   </head>
   <body>
-    
-     <div class="container">
-
-
+    <div class="container">
       <div class="sidebar">
         <div class="sidebar-mobile">
           <div class="steps-mobile">
@@ -35,18 +32,35 @@
       <div class="content">
         <div class="content-mobile">
           <div class="content-mobile__card">
-            <header>
+            <header class="content-header">
               <h1 class="bold-text card_main_title">Pick Add-ons</h1>
-              <p class="semi-bold-text card_sub_title">Add-ons help enhance your gaming experience.</p>
+              <p class="semi-bold-text card_sub_title">
+                Please provide your name, email address and phone number.
+              </p>
             </header>
+
+            <div class="content-body">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-input" placeholder="e.g Stephen King">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-input" placeholder="e.g stephenking@lorem.com">
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" id="phone" class="form-input" placeholder="e.g. +1 234 567 890">
+              </div>
+            </div>
           </div>
-          <div class="content-mobile__footer"></div>
+          <div class="content-mobile__footer">
+            <button class="btn btn-primary btn-normal right">Next Step</button>
+          </div>
         </div>
       </div>
-
-
-     </div>
-
-
+    </div>
   </body>
 </html>

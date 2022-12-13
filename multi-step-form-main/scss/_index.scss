@@ -1,57 +1,70 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: $ff-ubuntu;
-  background-color: $light-blue;
+    font-size: 1.6rem;
+    font-family: $ff-ubuntu;
+    background-color: $light-blue;
 }
 
 .container {
-  max-width: min(100%, 800px);
+    max-width: min(100%, 800px);
 }
 
 .sidebar {
-  &-mobile {
-    @include adjustbg(cover);
-    background-image: url(../assets/images/bg-sidebar-mobile.svg);
-    height: 25vh;
-  }
+    &-mobile {
+        @include adjustbg(cover);
+        background-image: url(../assets/images/bg-sidebar-mobile.svg);
+        height: 25vh;
+    }
 
-  &-desktop {
-    background-image: url(../assets/images/bg-sidebar-desktop.svg);
-  }
+    &-desktop {
+        background-image: url(../assets/images/bg-sidebar-desktop.svg);
+    }
 }
 
 .content {
-  &-mobile {
-    &__card {
-      background-color: $white;
-      max-width: 320px;
-      margin: 0 auto;
-      transform: translateY(-20%);
-      border-radius: 1rem;
-      box-shadow: 0 10px 10px rgba(#000000, 0.3);
-      padding: 2rem;
-
-      header {
+    &-header {
+        line-height: 1.5;
+        margin-bottom: 2.4rem;
         p {
-          margin-top: 1rem;
+            margin-top: 1rem;
         }
-      }
     }
 
-    &__footer {
-      background-color: $white;
+    &-mobile {
+        &__card {
+            background-color: $white;
+            max-width: min(100%,370px);
+            margin: 0 auto;
+            transform: translateY(-20%);
+            border-radius: 1rem;
+            box-shadow: 0 10px 10px rgba(#000000, 0.3);
+            padding: 2.5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        &__footer {
+            background-color: $white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 80px;
+            background-color: $white;
+            width: 100%;
+            box-shadow: 0 -3px -3px rgba(#000000, 0.3);
+            display: flex;
+            align-items: center;
+            padding: 0 1.6rem;
+        }
     }
-  }
 }

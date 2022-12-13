@@ -1,0 +1,61 @@
+.form {
+    &-group {
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &-input {
+        display: block;
+        width: 100%;
+        border-radius: $border-radius-1;
+        padding: 1.2rem;
+        border: none;
+        border: 1px solid $light-gray;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $cool-gray;
+            font-family: $ff-ubuntu;
+            font-weight: 700;
+        }
+    }
+
+    &-label {
+        display: block;
+        width: 100%;
+        color: $marine-blue;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+}
+
+.btn {
+    border: none;
+    background: none;
+    padding: .8em 1.2em;
+    border-radius: $border-radius-1;
+    font-family: $ff-ubuntu;
+
+    &-primary {
+        background-color: $marine-blue;
+        color: $white;
+        font-weight: 500;
+    }
+
+    &-nm {
+        font-size: $btn-normal;
+    }
+
+    &-sm {
+        font-size: $btn-sm;
+    }
+
+    &-lg {
+        font-size: $btn-lg;
+    }
+}

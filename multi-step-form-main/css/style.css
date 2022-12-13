@@ -1,3 +1,7 @@
+.right {
+  margin-left: auto;
+}
+
 @font-face {
   font-family: Ubuntu;
   src: url(../assets/fonts/Ubuntu-Bold.ttf);
@@ -82,20 +86,35 @@ body {
   background-image: url(../assets/images/bg-sidebar-desktop.svg);
 }
 
+.content-header {
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+}
+.content-header p {
+  margin-top: 1rem;
+}
 .content-mobile__card {
   background-color: hsl(0deg, 0%, 100%);
-  max-width: 320px;
+  max-width: min(100%, 370px);
   margin: 0 auto;
   transform: translateY(-20%);
   border-radius: 1rem;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
-}
-.content-mobile__card header p {
-  margin-top: 1rem;
+  padding: 2.5rem;
+  padding-bottom: 3.5rem;
 }
 .content-mobile__footer {
   background-color: hsl(0deg, 0%, 100%);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  background-color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  box-shadow: 0 -3px -3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 1.6rem;
 }
 
 .steps-mobile {
@@ -119,6 +138,54 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.form-group:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 1.2rem;
+  border: none;
+  border: 1px solid hsl(229deg, 24%, 87%);
+}
+.form-input:focus {
+  outline: none;
+}
+.form-input::placeholder {
+  color: hsl(231deg, 11%, 63%);
+  font-family: "Ubuntu";
+  font-weight: 700;
+}
+.form-label {
+  display: block;
+  width: 100%;
+  color: hsl(213deg, 96%, 18%);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.btn {
+  border: none;
+  background: none;
+  padding: 0.8em 1.2em;
+  border-radius: 4px;
+  font-family: "Ubuntu";
+}
+.btn-primary {
+  background-color: hsl(213deg, 96%, 18%);
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+}
+.btn-nm {
+  font-size: 1.6rem;
+}
+.btn-sm {
+  font-size: 1.4rem;
+}
+.btn-lg {
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
