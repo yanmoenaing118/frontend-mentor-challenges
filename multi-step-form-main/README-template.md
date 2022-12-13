@@ -111,3 +111,28 @@ Use this section to outline areas that you want to continue focusing on in futur
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
+*** ----- LOGIC ----- ***
+
+stepsInfo = {
+  activeIndex: 1,
+  steps: {
+    1: {
+      title: "Personal  Info",
+      desc: "Please provide your name, email address, and phone number."
+    },
+    2: {
+      title: "Select Your Plan",
+      desc: "You have the option of monthly or yearly billing."
+    },
+    3: {
+      title: "Pick add-ons",
+      desc: "Add-ons help enhance your gaming experience.
+"
+    },
+    4: {
+      title: "Finishing up",
+      desc: "Double-check everything looks OK before confirming."
+    }
+  }
+}

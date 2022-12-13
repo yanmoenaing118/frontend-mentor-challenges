@@ -138,6 +138,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Ubuntu";
+  font-weight: 500;
+}
+.steps-mobile ul li.active {
+  background-color: hsl(206deg, 94%, 87%);
+  color: hsl(213deg, 96%, 18%);
 }
 .form-group:not(:last-child) {
   margin-bottom: 1.6rem;
