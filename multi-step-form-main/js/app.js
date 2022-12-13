@@ -1,3 +1,7 @@
+const step = {
+    current: 1
+}
+
 /** Content Card Mobile Header Component start */
 function setUpContentCardMobileHeader() {
   const steps = [
@@ -24,7 +28,7 @@ function setUpContentCardMobileHeader() {
   const contentCardMobileHeaderDesc =
     contentCardMobileHeader.querySelector("p");
   const publicAPI = {
-    activeStep: 0,
+    activeStep: step.current,
     setActiveStep(index) {
       this.activeStep = index;
       this.render();
@@ -45,7 +49,7 @@ contentCardMobile.render();
 function setUpMobileSteps() {
   const mobileSteps = document.querySelectorAll(".steps-mobile ul li");
   const publicAPI = {
-    activeStep: 0,
+    activeStep: step.current,
     setActiveStep(index) {
       this.activeStep = index;
       this.render();

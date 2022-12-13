@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Frontend Mentor | Multi-step form</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="sidebar">
-        <div class="sidebar-mobile">
-          <div class="steps-mobile">
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-            </ul>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-mobile">
+        <div class="steps-mobile">
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
         </div>
       </div>
+    </div>
 
-      <div class="content">
-        <div class="content-mobile">
-          <div class="content-mobile__card">
-            <header class="content-header">
-              <h1 class="bold-text card_main_title">Pick Add-ons</h1>
-              <p class="semi-bold-text card_sub_title">
-                Please provide your name, email address and phone number.
-              </p>
-            </header>
+    <div class="content">
+      <div class="content-mobile">
+        <div class="content-mobile__card">
+          <header class="content-header">
+            <h1 class="bold-text card_main_title">Pick Add-ons</h1>
+            <p class="semi-bold-text card_sub_title">
+              Please provide your name, email address and phone number.
+            </p>
+          </header>
 
-            <div class="content-body hide">
+          <div class="content-body hide">
+            <form>
               <div class="form-group">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" id="name" class="form-input" placeholder="e.g Stephen King">
@@ -54,18 +52,39 @@
                 <label for="phone" class="form-label">Phone Number</label>
                 <input type="text" id="phone" class="form-input" placeholder="e.g. +1 234 567 890">
               </div>
-            </div>
+            </form>
+          </div>
 
-            <div class="content-body">
-              
+          <div class="content-body">
+            <div class="plans">
+              <div class="plan">
+                <div class="plan-icon">
+                  <img src="assets/images/icon-arcade.svg" alt="arcade">
+                </div>
+                <div class="plan-content">
+                  <div class="plan-title">Arcade</div>
+                  <div class="plan-subscription">$9/mo</div>
+                </div>
+              </div>
+            </div>
+            <div class="subscription-selector">
+              <span>Monthly</span>
+              <div class="switcher">
+                <input type="checkbox" name="switch" id="switch">
+                <label for="switch" class="ball">
+                </label>
+              </div>
+              <span>Yearly</span>
             </div>
           </div>
-          <div class="content-mobile__footer">
-            <button class="btn btn-primary btn-normal right" id="next">Next Step</button>
-          </div>
+        </div>
+        <div class="content-mobile__footer">
+          <button class="btn btn-primary btn-normal right" id="next">Next Step</button>
         </div>
       </div>
     </div>
-    <script src="js/app.js"></script>
-  </body>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
