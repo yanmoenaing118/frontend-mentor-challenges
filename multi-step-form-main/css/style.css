@@ -2,6 +2,10 @@
   margin-left: auto;
 }
 
+.hide {
+  display: none;
+}
+
 @font-face {
   font-family: Ubuntu;
   src: url(../assets/fonts/Ubuntu-Bold.ttf);

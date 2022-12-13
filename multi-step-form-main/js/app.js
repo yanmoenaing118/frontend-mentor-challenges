@@ -53,15 +53,15 @@ function setUpMobileSteps() {
     render() {
       mobileSteps.forEach((stepLi, i) => {
         stepLi.classList.remove("active");
-        if (this.activeStep == i ) {
+        if (this.activeStep == i) {
           stepLi.classList.add("active");
         }
+        stepLi.addEventListener("click", () => this.setActiveStep(i));
       });
     },
   };
   return publicAPI;
 }
-
 const mobileSteps = setUpMobileSteps();
 mobileSteps.render();
 /** Mobile Steps End */
@@ -69,8 +69,6 @@ mobileSteps.render();
 /** Action Triggers */
 const nextBtn = document.getElementById("next");
 nextBtn.addEventListener("click", () => {
-  console.log(contentCardMobile.activeStep + 1);
-  console.log(mobileSteps.activeStep + 1);
   contentCardMobile.setActiveStep(contentCardMobile.activeStep + 1);
   mobileSteps.setActiveStep(mobileSteps.activeStep + 1);
 });
