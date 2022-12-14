@@ -1,5 +1,5 @@
 const step = {
-    current: 2
+    current: 3
 }
 
 /** Content Card Mobile Header Component start */

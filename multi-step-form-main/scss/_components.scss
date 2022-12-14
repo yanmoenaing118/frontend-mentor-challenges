@@ -157,7 +157,7 @@
     border-radius: 8px;
     border: 1px solid $light-gray;
     background-color: $white;
-  
+
     &.active {
         border-color: $purpulish-blue;
         background-color: $alabaster;
@@ -193,4 +193,56 @@
         color: $purpulish-blue;
     }
 
+}
+
+.summary {
+    &-info {
+        background-color: $alabaster;
+        padding: 1.8rem;
+        border-radius: $border-radius-1;
+        box-shadow: 0 1px 3px rgba(#000, 0.1);
+    }
+
+    header {
+        @include flex-center;
+        justify-content: space-between;
+        border-bottom: 1px solid $light-gray;
+        padding-bottom: 1.8rem;
+
+        span {
+            color: $cool-gray;
+            text-decoration: underline;
+            font-size: 1.4rem;
+        }
+    }
+
+    &-item {
+        font-weight: 400;
+        font-size: 1.5rem;
+        @include flex-center;
+        justify-content: space-between;
+        padding: 1.4rem 0;
+
+        span {
+            color: $cool-gray;
+        }
+
+        strong {
+            color: rgba($marine-blue, 0.5);
+
+        }
+    }
+    footer {
+        @include flex-center;
+        justify-content: space-between;
+        padding: 1.4rem;
+
+        span {
+            color: $cool-gray;
+        }
+
+        strong {
+            color: $purpulish-blue;
+        }
+    }
 }

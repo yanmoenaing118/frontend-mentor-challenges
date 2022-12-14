@@ -308,4 +308,52 @@ body {
   color: hsl(243deg, 100%, 62%);
 }
 
+.summary-info {
+  background-color: hsl(231deg, 100%, 99%);
+  padding: 1.8rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.summary header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(229deg, 24%, 87%);
+  padding-bottom: 1.8rem;
+}
+.summary header span {
+  color: hsl(231deg, 11%, 63%);
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
+.summary-item {
+  font-weight: 400;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 0;
+}
+.summary-item span {
+  color: hsl(231deg, 11%, 63%);
+}
+.summary-item strong {
+  color: rgba(2, 41, 90, 0.5);
+}
+.summary footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem;
+}
+.summary footer span {
+  color: hsl(231deg, 11%, 63%);
+}
+.summary footer strong {
+  color: hsl(243deg, 100%, 62%);
+}
+
 /*# sourceMappingURL=style.css.map */
